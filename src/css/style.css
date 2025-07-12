@@ -143,3 +143,64 @@ section {
     background: var(--white-color);
     padding: 20px;
 }
+
+
+
+/* Mobile Responsiveness */
+@media (max-width: 576px) {
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    header nav{
+        display: block;
+    }
+
+    section{
+        padding: 3rem 0; 
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+    h2 {
+        font-size: 2.8rem;
+    }
+    h3 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1.05rem;
+    }
+    .section-padding {
+        padding: 80px 0;
+    }
+    .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+    h3 {
+        font-size: 2.2rem;
+    }
+    p {
+        font-size: 1.1em;
+    }
+    .section-padding {
+        padding: 100px 0;
+    }
+}

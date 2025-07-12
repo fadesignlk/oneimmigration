@@ -1,0 +1,145 @@
+/* Import Google Fonts - Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* do not have inline comments */
+
+/* Color Variables */
+:root {
+    --primary-color: #009bde; /* Formerly Celestial Blue - Main brand color */
+    --secondary-color: #084b83; /* Formerly Paynes Gray - Darker accent/secondary elements */
+    --accent-color: #fe5d26; /* Formerly Pearl - Light background or highlight */
+    --highlight-color: #5bc0eb; /* Formerly Aero - Lighter blue for links/interactive elements */
+    --text-color: #37392e; /* Formerly Black Olive - Primary text color */
+    --text-color-heading: #191970; /* Formerly Black Olive - Primary text color */
+    --white-color: #ffffff;
+    --light-gray: #f8f9fa; /* General light background */
+}
+
+/* Basic Body Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+    background-color: var(--light-gray);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    color: var(--primary-color);
+    margin-top: 0;
+    font-weight: 700; 
+    letter-spacing: -1px;
+}
+
+h1 {
+    font-size: 3.5rem; 
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 2.95rem;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+h4 {
+    font-size: 1.4em;
+}
+
+/* Paragraphs */
+p {
+    margin-top: 0;
+    margin-bottom: 1rem; 
+    font-size: 1rem;
+    font-weight: 400; 
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease; 
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* General Container for content width */
+.container {
+    max-width: 1200px; 
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px; 
+    padding-right: 15px;
+}
+
+.btn{
+    border-radius: 0;
+    padding: 12px 20px;    
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color);
+}
+
+
+/* Header */
+header {
+    padding: 10px 0; 
+    background-color: var(--white-color);
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand img {
+    max-height: 70px;
+    width: auto; 
+}
+
+.navbar-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar-menu ul li:not(:last-child) {
+    margin-right: 20px; 
+}
+
+section {
+    padding: 6rem 0; 
+}
+
+#hero-section{
+    img{
+        width: 100%;
+        height: auto;
+        max-height: 450px; 
+        object-fit: cover; 
+    }
+}
+
+
+#section-2 .features .features-item {
+    display: flex;
+    flex-direction: column;
+    background: var(--white-color);
+    padding: 20px;
+}

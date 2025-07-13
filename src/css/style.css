@@ -328,6 +328,13 @@ footer .footer-info {
     padding-bottom: 32px;
     display: flex;
     justify-content: space-between;
+
+    h6 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+        color: var(--text-color-heading);
+    }
 }
 
 footer .footer-info .footer-logo img {

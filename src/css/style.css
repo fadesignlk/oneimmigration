@@ -59,6 +59,10 @@ h4 {
     font-size: 1.4em;
 }
 
+h6{
+    letter-spacing: normal;
+}
+
 /* Paragraphs */
 p {
     margin-top: 0;
@@ -313,9 +317,54 @@ section {
 
 #we-are .team .card:hover   .card-img-top {
     transform: scale(1.05);
-
 } 
 
+footer {
+    padding: 32px 0;
+    border-top: 1px solid #e9ecef;
+}
+
+footer .footer-info {
+    padding-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .footer-info .footer-logo img {
+    max-height: 80px;
+}
+
+.footer-links ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.footer-contact {
+    .social-icons .bi{
+        font-size: 1.5rem;
+    }
+
+    .social-icons a {
+        margin-right: 10px;
+        color: var(--text-color);
+        transition: color 0.3s ease;
+    }
+}
+
+.footer-bottom .container{
+    border-top: 1px solid var(--bg-a);
+    padding-top: 20px;
+
+    p{
+        margin-bottom: 0;
+        text-align: center;
+    }
+}
 
 /* Mobile Responsiveness */
 @media (max-width: 576px) {
@@ -374,6 +423,24 @@ section {
         align-items: flex-start;
         text-align: left;
     }
+
+    footer .footer-info {
+        flex-direction: column;
+    }
+
+    footer .footer-info .footer-logo img {
+        max-height: 60px;
+        margin-bottom: 1rem;
+    }
+
+    .footer-links ul{
+        margin-bottom: 2rem;
+
+        li:last-child {
+            margin-bottom: 10px;
+        }
+    }
+
 }
 
 /* Medium devices (tablets, 768px and up) */

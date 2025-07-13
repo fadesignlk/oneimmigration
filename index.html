@@ -55,7 +55,7 @@
                 <div class="col-md-7 mb-5 mb-md-0">
                     <h1>Expert UK Immigration Services in Leicester</h1>
                     <p>At One Immigration, we specialise in UK immigration and nationality law. Whether you need help with a visa, applying for citizenship, appealing a decision or bringing a family member to the UK,  our OISC-regulated caseworkers are here to help.</p>                
-                    <a href="#section-2" class="btn btn-primary">Learn More</a>
+                    <a href="#why-section" class="btn btn-primary">Learn More</a>
                 </div>
                 <div class="col-md-5">
                     <img src="./src/img/immigration-adviser-in-consultation-with-client-about-uk-visa.webp" alt="One Immigration adviser in consultation with client about UK visa options" class="img-fluid">
@@ -71,7 +71,7 @@
                 <div class="col-md-5 mb-5 mb-md-0">
                     <div>
                         <h2>Why Hundreds Trust One Immigration Every Year</h2>
-                        <p>Real advice. Real outcomes. From people who understand what you're going through.</p>
+                        <p class="body-text">Real advice. Real outcomes. From people who understand what you're going through.</p>
                     </div>
                     <div>
                         <a href="#contact" class="btn btn-primary">Book a Consultation</a>
@@ -79,33 +79,39 @@
                 </div>
                 <div class="col-md-7 features">
                     <div class="features-item bg-a">
+                        <i class="bi bi-shield-check"></i>
                         <h4>OISC-Regulated Experts You Can Rely On</h4>
-                        <p>Our accredited caseworkers have decades of experience dealing with everything from straightforward visa applications to complex human rights cases. We don’t sugar-coat things. If you have a case, we’ll tell you. If you don’t, we’ll tell you that too.</p>
+                        <p>We’ve handled it all - from simple visa cases to last-minute asylum appeals. We’ll always be honest with you about your chances.</p>
                     </div>
                     <div class="features-item bg-b">
+                        <i class="bi bi-globe2"></i>
                         <h4>We Speak Your Language - Literally</h4>
-                        <p>Whether you speak Gujarati, Hindi, Punjabi, Urdu, Swahili, Kutchi or English, you’ll be understood here. No need for external translators or awkward conversations, our team speaks your language and respects your culture.</p>
+                        <p>Our team speaks Gujarati, Hindi, Punjabi, Urdu, Swahili, Kutchi and English - so you’ll never struggle to be understood.</p>
                     </div>
                     <div class="features-item bg-c">
+                        <i class="bi bi-person-check"></i>
                         <h4>No Hidden Fees. Just Straight Talk.</h4>
-                        <p>We offer fixed-fee consultations from £100. Everything is agreed upfront. No surprise charges, no fine print. You’ll always know where you stand, and what your next steps are.</p>
+                        <p>Our £100 consultations are fixed-fee. No surprises, no stress - just clear advice from day one.</p>
                     </div>
                     <div class="features-item bg-d">
-                            <h4>Offices You Can Visit, or Speak to Us from Home</h4>
-                            <p>Prefer to see someone in person? We have offices in Leicester, Birmingham and Coventry — and we also offer remote consultations across the UK and overseas, including in Mumbai and Delhi.</p>
+                        <i class="bi bi-buildings"></i>
+                        <h4>Offices You Can Visit, or Speak to Us from Home</h4>
+                        <p>Pop in to see us in Leicester, Birmingham or Coventry, or chat with us from anywhere in the UK or overseas.</p>
                     </div>
                 </div>
         </div>
     </section>
 
+
     <section id="we-are">
         <div class="container">
             <div class="section-header mb-4">
-                <h5>We Are</h5>
-                <h2>Our lawers have all received training and gained experience in the highly regarded arbitration departments of leading international law firms.</h2>
+                <h5>Who are we </h5>
+                <h2>Meet the People Behind One Immigration UK</h2>
+                <p>At One Immigration, we’re proud to have a diverse and experienced team of immigration specialists, here to guide you through complex UK immigration matters with honesty, clarity, and care.</p>
             </div>
             <div class="team">
-                <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="row row-cols-1 row-cols-md-4 g-4">
                     <div class="col">
                         <div class="card">
                         <img src="./src/img/pexels-august-de-richelieu-4427614.webp" class="card-img-top" alt="...">
@@ -129,6 +135,15 @@
                         <img src="./src/img/pexels-august-de-richelieu-4427506.webp" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Mrs Zahida Sheikh</h5>
+                            <p class="card-text">Office Manager</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                        <img src="./src/img/pexels-august-de-richelieu-4427630.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Join Our Team</h5>
                             <p class="card-text">Office Manager</p>
                         </div>
                         </div>
@@ -176,7 +191,8 @@
           // Mobile Menu Toggle
           const hamburgerToggle = document.getElementById('hamburger-toggle');
           const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
-          const mobileNavContent = document.getElementById('mobile-nav-content');          
+          const mobileNavContent = document.getElementById('mobile-nav-content');    
+          const desktopNav = document.getElementById('desktop-navbar');      
 
           const toggleMobileMenu = () => {
               mobileNavOverlay.classList.toggle('active');
@@ -190,6 +206,26 @@
                   toggleMobileMenu(); 
               }
           });
+
+          const mediaQuery = window.matchMedia('(max-width: 768px)');
+
+        const handleMediaQueryChange = (e) => {
+              if (e.matches) { // If it's a mobile screen
+                  desktopNav.style.display = 'none';
+                  hamburgerToggle.style.display = 'flex'; // Ensure hamburger is visible
+              } else { // If it's a desktop screen
+                  desktopNav.style.display = 'flex';
+                  hamburgerToggle.style.display = 'none';
+                  if (mobileNavContent.classList.contains('active')) { // Close menu if open on resize
+                      toggleMobileMenu(); // Use the combined toggle
+                  }
+              }
+          };
+
+          // Initial check
+          handleMediaQueryChange(mediaQuery);
+          // Listen for changes
+          mediaQuery.addEventListener('change', handleMediaQueryChange);
 
 
       });

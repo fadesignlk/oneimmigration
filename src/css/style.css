@@ -18,7 +18,7 @@
     --light-gray: #f8f9fa; 
     --bg-shade: #edf2fb; 
     --bg-a: #e76f51;
-    --bg-b: #e9c46a;
+    --bg-b: #ffd166;
     --bg-c: #ffddd2;
     --bg-d: #2a9d8f;
     --transition-timing-function: ease-in-out;
@@ -51,8 +51,9 @@ h1 {
 }
 
 h2 {
-    font-size: 2.95rem;
+    font-size: 2.7rem;
     letter-spacing: -1px;
+    line-height: 3rem;
 }
 
 h3 {
@@ -100,7 +101,7 @@ a:hover {
     /* grid-area: 1 / 1 / 2 / 2; */
 
     
-    h4, p{
+    h4, p, .bi{
         color: var(--white-color);
     }
 }
@@ -121,7 +122,7 @@ a:hover {
 .bg-d {
     background-color: var(--bg-d);
     /* grid-area: 3 / 2 / 4 / 3; */
-    h4, p{
+    h4, p, .bi{
         color: var(--white-color);
     }
 
@@ -162,12 +163,21 @@ img{
 header {
     padding: 10px 0; 
     background-color: var(--white-color);
+    position: relative; /* Essential for z-index to work */
+    z-index: 1000001;
 }
 
 header .navbar-fa{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--white-color);
+}
+
+.navbar-brand{
+    z-index: 1000002;
+    background-color: var(--white-color);
+
 }
 
 .navbar-brand img {
@@ -198,7 +208,7 @@ header .navbar-fa{
     height: 25px; /* Height of the icon */
     padding: 0;
     position: relative;
-    z-index: 101; /* Ensure it's above the nav and overlay */
+    z-index: 1000002;
 }
 
 #hamburger-toggle .bar {
@@ -226,31 +236,33 @@ header .navbar-fa{
     position: fixed;
     background-color: var(--white-color);
     width: 100%;
-    z-index: 1000000;
-    right: 0;
+    z-index: 100000;
+    top: 0; /* Position from the top */
+    left: 0; /* Position from the left */
     opacity: 0;
     visibility: hidden;
-    transform: translateX(100%); 
+    transform: translateY(-100%); /* Start off-screen above */
     transition: transform 0.5s var(--transition-timing-function), opacity 0.5s var(--transition-timing-function), visibility 0.2s linear 0.5s;
 }
 
 .mobile-nav-overlay.active {
     opacity: 1;
     visibility: visible;
-    transform: translateX(0);
+    transform: translateY(0); /* Slide down to original position */
     transition-delay: 0s; /* Ensure no delay when opening */
 }
 
 .mobile-nav-content{
     opacity: 0;
-    transform: translateX(100%); 
+    transform: translateY(-100%); /* Start off-screen above */
     transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0.1s, opacity 0.3s ease-in-out 0.1s;
+    padding-top: 60px; /* Adjust as needed for content placement */
 }
 
 .mobile-nav-content.active {
-    transform: translateX(0) scale(1); 
+    transform: translateY(0) scale(1); /* Slide down to original position */
     opacity: 1;
-    transition-delay: 0s; 
+    transition-delay: 0s;
 }
 
 .mobile-nav-content nav {
@@ -283,6 +295,11 @@ section {
 
 #why-section{
     background-color: var(--white-color);
+
+        p.body-text{
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
 }
 
 #why-section .features{
@@ -299,9 +316,14 @@ section {
 #why-section .features .features-item {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 12px 20px;
     height: auto;
     border-radius: 16px;
+
+    .bi{
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
 }
 
 #we-are {
@@ -324,6 +346,10 @@ section {
 
 .card-img-top{
     transition: transform 0.3s ease-in-out, border-radius 0.1s ease-in-out;
+    width: auto;
+    height: 320px !important;
+    object-fit: cover;
+    border-radius: 16px !important;
 }
 
 #we-are .team .card:hover   .card-img-top {

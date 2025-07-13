@@ -117,7 +117,6 @@ a:hover {
     h4{
         font-size: 4rem;
     }
-
 }
 
 .btn{
@@ -128,11 +127,11 @@ a:hover {
 .btn-primary {
     background-color: var(--primary-color);
     border: none;
+    transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
     background-color: var(--secondary-color) !important;
-    border-color: var(--secondary-color);
 }
 
 .btn-link {
@@ -144,6 +143,10 @@ a:hover {
 .btn-link:hover {
     color: var(--white-color);
     text-decoration: none;
+}
+
+img{
+    border-radius: 0 !important;
 }
 
 
@@ -282,6 +285,31 @@ section {
     height: auto;
 }
 
+#we-are {
+    background-color: var(--bg-a);
+    padding: 50px 0;
+}
+
+#we-are .team .card {
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+} 
+
+#we-are .team .card .card-body {
+    background-color: transparent !important;
+    padding-left: 0;
+    padding-right: 0;
+} 
+
+.card-img-top{
+    transition: transform 0.3s ease-in-out, border-radius 0.1s ease-in-out;
+}
+
+#we-are .team .card:hover   .card-img-top {
+    transform: scale(1.05);
+
+} 
 
 
 /* Mobile Responsiveness */
@@ -326,6 +354,20 @@ section {
         img {
             max-height: 300px; 
         }
+    }
+
+    #section-2 .features{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+    }
+
+    .bg-a, .bg-b, .bg-c, .bg-d {
+        grid-area: unset; 
+        grid-row: unset; 
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
     }
 }
 

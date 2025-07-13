@@ -217,7 +217,7 @@ header .navbar-fa{
     position: fixed;
     background-color: var(--white-color);
     width: 100%;
-    z-index: 1050;
+    z-index: 1000000;
     right: 0;
     opacity: 0;
     visibility: hidden;
@@ -298,6 +298,7 @@ section {
     border: none;
     border-radius: 0;
     background-color: transparent;
+    position: inherit;
 } 
 
 #we-are .team .card .card-body {

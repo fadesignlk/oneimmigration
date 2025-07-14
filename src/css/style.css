@@ -13,14 +13,15 @@
     --accent-color-red: #cc2936; 
     --highlight-color: #5bc0eb; 
     --text-color: #37392e; 
+    --text-color-shade: #555555; 
     --text-color-heading: #272525; 
     --white-color: #ffffff;
     --light-gray: #f8f9fa; 
     --bg-shade: #edf2fb; 
-    --bg-a: #e76f51;
-    --bg-b: #ffd166;
-    --bg-c: #ffddd2;
-    --bg-d: #2a9d8f;
+    --bg-a: #AFDBF5;
+    --bg-b: #FFEFD5;
+    --bg-c: #FFEFD5;
+    --bg-d: #AFDBF5;
     --transition-timing-function: ease-in-out;
 }
 
@@ -100,10 +101,10 @@ a:hover {
     color: var(--text-color);
     /* grid-area: 1 / 1 / 2 / 2; */
 
-    
+/*     
     h4, p, .bi{
         color: var(--white-color);
-    }
+    } */
 }
 
 .bg-b {
@@ -122,9 +123,9 @@ a:hover {
 .bg-d {
     background-color: var(--bg-d);
     /* grid-area: 3 / 2 / 4 / 3; */
-    h4, p, .bi{
+    /* h4, p, .bi{
         color: var(--white-color);
-    }
+    } */
 
 }
 
@@ -161,17 +162,21 @@ img{
 
 /* Header */
 header {
-    padding: 10px 0; 
-    background-color: var(--white-color);
     position: relative; /* Essential for z-index to work */
     z-index: 1000001;
+    background-color: var(--white-color);
+
 }
 
 header .navbar-fa{
+    position: relative; /* Essential for z-index to work */
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--white-color);
+    z-index: 1000001;
 }
 
 .navbar-brand{
@@ -356,6 +361,55 @@ section {
     transform: scale(1.05);
 } 
 
+.page-header{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 4rem 0;
+    
+    h1{
+        color: var(--white-color);
+    }
+
+
+    .breadcrumb{
+        font-size: 1.3rem;
+        font-weight: 500; 
+        color: var(--white-color);
+    }
+
+    .breadcrumb .breadcrumb-item, .breadcrumb .breadcrumb-item a {
+        color: var(--white-color);
+    }
+
+    .breadcrumb-item+.breadcrumb-item::before{
+        content: "/";
+        color: var(--white-color);
+    } 
+}
+
+#services-section{
+    img{
+        width: 100%;
+        height: auto;
+        max-height: 450px; 
+        object-fit: cover; 
+    }
+
+    p{
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+}
+
+#services-list-section{
+    background-color: var(--bg-shade);
+
+    article{
+        border-bottom: 1px solid var(--text-color-shade);
+        margin-bottom: 2.75rem;
+    }
+}
+
 footer {
     padding: 32px 0;
 }
@@ -443,6 +497,10 @@ footer .footer-info .footer-logo img {
 
     section{
         padding: 3rem 0; 
+    }
+
+    .page-header{
+        padding-top: 8rem;
     }
 
     #hero-section {

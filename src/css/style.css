@@ -366,7 +366,7 @@ section {
     color: var(--white-color);
     padding: 4rem 0;
     
-    h1{
+    h2{
         color: var(--white-color);
     }
 
@@ -386,6 +386,33 @@ section {
         color: var(--white-color);
     } 
 }
+
+#about-info-section, #about-offices-section, #about-language-section, #about-why-choose-section{
+     padding: 2.5rem 0;
+
+    img{
+        width: 100%;
+        height: auto;
+        max-height: 450px; 
+        object-fit: cover; 
+    }
+
+    p{
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+}
+
+#about-info-section{
+     padding: 6rem 0;
+}
+
+#about-why-choose-section{
+    background-color: var(--bg-b);
+}
+
+
+
 
 #services-section{
     img{

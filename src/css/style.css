@@ -87,6 +87,13 @@ a:hover {
     text-decoration: none;
 }
 
+button{
+  border: 0;
+  margin: 0;
+  padding: 0;
+
+}
+
 /* General Container for content width */
 .container {
     max-width: 1200px; 
@@ -584,6 +591,22 @@ footer .footer-info .footer-logo img {
     p{
         margin-bottom: 0;
         text-align: center;
+    }
+}
+
+#carousel-btn{
+    right:0;
+    .carousel-next, .carousel-prev {            
+        color: var(--primary-color);
+        background: none;
+    }
+
+    .carousel-next{
+        padding-left: .5rem;
+    }
+
+    i.bi{
+        font-size: 2.2rem;
     }
 }
 

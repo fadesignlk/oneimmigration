@@ -408,11 +408,8 @@ section {
 }
 
 #about-why-choose-section{
-    background-color: var(--bg-b);
+    background-color: var(--bg-shade);
 }
-
-
-
 
 #services-section{
     img{
@@ -496,6 +493,12 @@ section {
 
 footer {
     padding: 32px 0;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+footer a{
+    color: var(--white-color);
 }
 
 footer .footer-info {
@@ -507,7 +510,7 @@ footer .footer-info {
         font-size: 1.2rem;
         margin-bottom: 1rem;
         font-weight: 700;
-        color: var(--text-color-heading);
+        color: var(--white-color);
     }
 }
 
@@ -529,11 +532,12 @@ footer .footer-info .footer-logo img {
 .footer-contact {
     .social-icons .bi{
         font-size: 1.5rem;
+        color: var(--white-color);
     }
 
     .social-icons a {
         margin-right: 10px;
-        color: var(--text-color);
+        color: var(--white-color);
         transition: color 0.3s ease;
     }
 }

@@ -469,6 +469,41 @@ section {
     align-items: center;
 }
 
+.office-box {
+    padding: 20px;
+    border: 1px solid #eee;
+    background-color: var(--bg-shade);
+    height: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.office-box:hover {
+        h5{
+        color: var(--white-color);
+    }
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+.office-box.active {
+        h5{
+        color: var(--white-color);
+    }
+    background-color: var(--secondary-color);
+    border-color: var(--primary-color);
+    color: var(--white-color);
+
+}
+#map {
+    height: 400px;
+    width: 100%;
+    margin-top: 30px;
+    border-radius: 8px;
+}
+
 .blog-card img {
     object-fit: cover;
     border-radius: 0 !important;
